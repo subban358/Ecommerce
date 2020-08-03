@@ -8,6 +8,6 @@ router = routers.DefaultRouter()
 router.register('', views.UserViewSet)
 urlpatterns = [
     path('', include(router.urls)),
-    path('login/', views.signin, name='signin'),
-    path('logout/<int:id>/', views.signout, name='signout')
+    path('signin/', views.signin, name='signin'),
+    path('signout/<int:id>/', views.signout, name='signout')
 ]
