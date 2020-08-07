@@ -24,8 +24,8 @@ def signin(request):
     username = request.POST['email']
     password = request.POST['password']
 
-    print(username)
-    print(password)
+    #print(username)
+    #print(password)
 
 # validation part
     if not re.match("^[\w\.\+\-]+\@[\w]+\.[a-z]{2,3}$", username):
