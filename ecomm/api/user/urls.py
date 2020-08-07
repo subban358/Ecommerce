@@ -3,11 +3,11 @@ from django.urls import path, include
 
 from . import views
 
-
 router = routers.DefaultRouter()
-router.register('', views.UserViewSet)
+router.register(r'', views.UserViewSet)
+
 urlpatterns = [
-    path('', include(router.urls)),
-    path('signin/', views.signin, name='signin'),
-    path('signout/<int:id>/', views.signout, name='signout')
+    path('login/', views.signin, name='signin'),
+    path('logout/<int:id>/', views.signout, name='signout'),
+    path('', include(router.urls))
 ]
