@@ -59,4 +59,4 @@ def process_payment(request, id, token):
             }
         })
     else:
-        return  JsonResponse({"error": True, "success": False})
+        return JsonResponse({"error": True, "success": False})
